@@ -18,6 +18,12 @@
     }
 }
 
+:root {
+    --font-padrao: Arial, Helvetica, sans-serif;
+    --font-t-principal: 'Passion One', serif;
+    --font-texto: 'Sriracha', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -37,11 +43,12 @@ header {
 
 #header-content > h1 {
     padding-bottom: 7px;
-    font: normal bold 4.5vw 'Passion One', serif;
+    font: normal 4.5vw var(--font-t-principal);
+    font-variant: small-caps;
 }
 
 #header-content > p {
-    font: normal 2vw Arial, Helvetica, sans-serif;
+    font: normal 2vw var(--font-padrao);
 }
 
 nav {
@@ -60,7 +67,7 @@ nav {
 #nav-menu  li {
     display: inline-block;
     margin-right: 1vw;
-    font: normal bold 1em Arial, Helvetica, sans-serif;
+    font: normal bold 1em var(--font-padrao);
 }
 
 #nav-menu a {
@@ -82,14 +89,14 @@ main {
 }
 
 article > h1 {
-    font: normal bold 3.5vw Arial, Helvetica, sans-serif;
+    font: normal bold 3.5vw var(--font-padrao);
     text-indent: 40px;
     margin-top: 3vw;
     margin-bottom: 5px;
 }
 
 article > p {
-    font: normal 1.8vw Arial, Helvetica, sans-serif;
+    font: normal 1.8vw var(--font-padrao);
     text-indent: 45px;
     margin-bottom: 3vwpx;
 }
@@ -105,7 +112,7 @@ article a:hover {
 }
 
 .normal-content {
-    font: italic 3vw 'Sriracha', sans-serif;
+    font: normal 3vw var(--font-texto);
     line-height: 2em;
     padding: 30px;
 }
@@ -117,7 +124,7 @@ article a:hover {
 }
 
 .image-content {
-    font: italic 3vw 'Sriracha', sans-serif;
+    font: normal 3vw var(--font-texto);
     line-height: 2em;
     padding: 50px 30px;
     background-color: black;
@@ -152,7 +159,7 @@ footer {
 #footer-content {
     width: max-content;
     margin: auto;
-    font: normal 1em Arial, Helvetica, sans-serif;
+    font: normal 1em var(--font-padrao);
 }
 
 #footer-content a {
