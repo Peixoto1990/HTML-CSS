@@ -14,6 +14,7 @@
             border: 3px solid black;
             border-collapse: collapse;
             width: 400px;
+            height: 400px;
         }
 
         tr.linha-clara {
@@ -27,12 +28,18 @@
         td {
             border: 1px solid black;
             padding: 5px;
+            text-align: center; /* Alinhamento horizontal - padrão é [left = esquerda] */
+            vertical-align: middle; /* Alinhamento vertical - padrão é [middle = meio] */
         }
 
         td.importante {
             background-color: red;
             color: yellow;
             font-weight: bold;
+        }
+
+        td.numero {
+            text-align: right;
         }
     </style>
 </head>
@@ -53,12 +60,12 @@
         <tr class="linha-escura">
             <td>A2</td>
             <td class="importante">B2</td>
-            <td>C2</td>
+            <td class="numero">C2</td>
         </tr>
         <tr class="linha-clara">
             <td>A3</td>
             <td>B3</td>
-            <td>C3</td>
+            <td class="numero">C3</td>
         </tr>
         <tr class="linha-escura">
             <td>A4</td>
