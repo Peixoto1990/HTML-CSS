@@ -15,9 +15,24 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font: normal bold 1.5em Arial, Helvetica, sans-serif;
+            padding: 10px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        tbody > tr:nth-child(odd) {    /* odd = ímpar - posso usar (2n-1) */
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) {   /* even = par - posso usar (2n) */
+            background-color: lightgray;
         }
 
         th {
@@ -49,6 +64,7 @@
     <!--  
         Anatomia para tabelas grandes
         Table
+            Caption
             Thead
                 tr, td, th
             Tbody
@@ -57,13 +73,14 @@
                 tr, td, th
     -->
     <table>
-        <thead>
+        <caption>População das Unidades Federativas</caption> <!-- Título -->
+        <thead> <!-- cabeça -->
             <tr>
-                <th>Estado</th>
-                <th class="numero">População (2010)</th>
+                <th scope="col">Estado</th>
+                <th scope="col" class="numero" style="width: 160px;">População (2010)</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> <!-- Corpo -->
             <tr>
                 <td>São Paulo</td>
                 <td class="numero">41 262 199</td>
@@ -173,9 +190,9 @@
                 <td class="numero">450 479</td>
             </tr>
         </tbody>
-        <tfoot>
+        <tfoot> <!-- Pé -->
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="numero" id="table-foot">190 755 799</td>
             </tr>
         </tfoot>
